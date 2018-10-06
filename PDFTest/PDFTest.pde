@@ -1,31 +1,35 @@
 import processing.pdf.*;
 import java.util.Arrays;
 
-String[] hexcolors = new String[] {"e6194B", "3cb44b", "ffe119", "4363d8", "f58231",
-                                   "911eb4", "42d4f4", "f032e6", "bfef45", "fabebe",
-                                   "469990", "e6beff", "9A6324", "fffac8", "800000",
-                                   "aaffc3", "808000", "ffd8b1", "000075", "a9a9a9",
-                                   "ffffff", "000000"};
+String[] hexcolors = new String[] {"e6194BFF", "3cb44bFF", "ffe119FF", "4363d8FF", "f58231FF",
+                                   "911eb4FF", "42d4f4FF", "f032e6FF", "bfef45FF", "fabebeFF",
+                                   "469990FF", "e6beffFF", "9A6324FF", "fffac8FF", "800000FF",
+                                   "aaffc3FF", "808000FF", "ffd8b1FF", "000075FF", "a9a9a9FF",
+                                   "ffffffFF", "000000FF"};
 
 void setup() {
-  //size(400, 400, PDF, "filename.pdf");
-  size(400, 400);
-  textFont(createFont("Makinas-Scrap-5.otf", 20));
+  size(1024, 576, PDF, "filename.pdf");
+  //size(1024, 576);
+  textFont(createFont("ume-hgo4.ttf", 40));
   noLoop();
 }
 
 void draw() {
   Table table = loadTable("info.csv", "tsv");
   TableRow[] testrows = new TableRow[4];
-  for (int i = 0; i < 4; i++) {
-    testrows[i] = table.getRow(i);
+  PGraphicsPDF pdf = (PGraphicsPDF) g;
+  for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 4; i++) {
+      testrows[i] = table.getRow(j * 4 + i);
+    }
+    Pattern pattern = new Pattern(testrows);
+    println(pattern);
+    
+    background(0);
+    pattern.show();
+    pdf.nextPage();
   }
-  Pattern pattern = new Pattern(testrows);
-  println(pattern);
-  
-  background(0);
-  pattern.show();
-  
+  //prettyPrint(10, 10, new String[] {"this", "test"}, new color[] {0xe6194BFF, idToColor("P1")});//idToColor("S1")
   
   //JSONArray testArray = new JSONArray();
   //JSONObject test = new JSONObject();
@@ -38,20 +42,29 @@ void draw() {
   //} else {
   //  pdf.nextPage();
   //}
+  exit();
 }
 
 void prettyPrint(float x, float y, String[] text, color[] colors) {
   float accx = x;
   for (int i = 0; i < text.length; i++) {
-    stroke(colors[i]);
+    fill(colors[i]);
     text(text[i], accx, y);
     accx += textWidth(text[i]);
   }
 }
 
-//color idToColor(String s) {
-//
-//}
+color idToColor(String s) {
+  switch (s) {
+    case "S1": return unhex(hexcolors[0]);
+    case "S2": return unhex(hexcolors[1]);
+    case "P1": return unhex(hexcolors[2]);
+    case "X1": return unhex(hexcolors[3]);
+    case "X2": return unhex(hexcolors[4]);
+    case "T1": return unhex(hexcolors[5]);
+    default: return color(255);
+  }
+}
 
 class Pattern {
   String[] basej;
@@ -71,7 +84,7 @@ class Pattern {
     Arrays.fill(basejc, color(255));
     Arrays.fill(baseec, color(255));
     Arrays.fill(genjc, color(255));
-    
+        
     for (int i = 0; i < rows[0].getColumnCount(); i++) {
       basej[i] = rows[0].getString(i);
     }
@@ -79,18 +92,35 @@ class Pattern {
       basee[i] = rows[2].getString(i);
     }
     for (int i = 0; i < rows[0].getColumnCount(); i++) {
-      genj[i] = rows[1].getString(i).isEmpty() ? rows[0].getString(i) : rows[1].getString(i);
+      String s = rows[1].getString(i);
+      if (s.isEmpty() || s.charAt(0) == 'X') {
+        genj[i] = basej[i];
+        continue;
+      }
+      genj[i] = rows[1].getString(i);
     }
     
-    //for (int i = 0; i < rows[1].getColumnCount(); i++) {
-    //  basejc[i] = idToColor(rows[1].getString(i));
-    //}
+    for (int i = 0; i < rows[1].getColumnCount(); i++) {
+      basejc[i] = idToColor(rows[1].getString(i));
+    }
+    System.arraycopy(basejc, 0, genjc, 0, basejc.length);
+    for (int i = 0; i < rows[3].getColumnCount(); i++) {
+      String string = rows[3].getString(i);
+      color c;
+      if (string.length() == 0) {
+        c = color(255);
+      } else {
+        c = basejc[string.charAt(0) - 65];
+      }
+      baseec[i] = c;
+    }
+    print();
   }
   
   void show() {
-    prettyPrint(10, 30, basej, basejc);
-    prettyPrint(10, 50, basee, baseec);
-    prettyPrint(10, 70, genj,  genjc);
+    prettyPrint(10, 50, basej, basejc);
+    prettyPrint(10, 100, basee, baseec);
+    prettyPrint(10, 150, genj,  genjc);
   }
   
   String toString() {
