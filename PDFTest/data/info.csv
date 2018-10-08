@@ -1,77 +1,149 @@
-9-1										
-犬	と　	猫	と　	どちら	の	方	が　	好き	ですか。	
-S1		S2		X1		X2		P1		
-Which 	one 	is 	liked, 	dogs 	or 	cats 	?			
-E	G		I	A		C				
-										
-9-1										
-私	は　	猫	より　	犬	の	方	が　	好き	です。	
-T1		S2	X1	S1		X2		P1		
-As for 	me, 	dogs 	are 	more 	liked 	than 	cats.			
-	A	E		D	I		C			
-										
-9-2										
-アメリカ	は　	中国	ほど　	広く	ありません。					
-T1		S1	X1	P1						
-As for 	America, 	it is 	not as 	spacious 	as 	China.				
-	A		D	E		C				
-										
-9-2										
-お好き	ですか。									
-P1										
-Is 	liked	?								
-B	A									
-										
-9-3										
-魚	と　	豚肉	と　	チキン	で　	何	が　	一番　	いい	ですか。
-S1		S2		S3		X1		X2	P1	
-As for 	fish, 	pork, 	and 	chicken, 	which 	is 	number-one 	good	?	
-	A	C		E	G		I	J		
-										
-9-3										
-この　クラス	で　	だれ	が　	一番　	背が　高い	ですか。				
-T1		S1		X1	P1					
-In 	this class, 	who 	is 	number-one 	tall?					
-	A	C		E	F					
-										
-9-3										
-この　中	で　	これ	が　	一番　	好き	です。				
-T1		S1		X1	P1					
-Among these, 	this 	is 	number-one 	liked.						
-A	C		E	F						
-										
-10-1										
-しあい	が　	はじまります。								
-S1		V1								
-The game 	will start.									
-A	C									
-										
-10-1										
-しあい	を　	はじめます。								
-S1		V1								
-(someone) 	will start 	the game.								
-	C	A								
-										
-10-1										
-試合	の	始まる	時間	は　	何時	ですか。				
-T1		V1	N1		N2					
-What 	is 	game 	starting 	time?						
-F		A	C	D						
-										
-10-1										
-今日　試合	が　	あります	が、	行き	ませんか。					
-S1		V1		V2	X1					
-There 	is 	a 	game today. 	Won’t you 	go?					
-	C		A	F	E					
-										
-10-2										
-だれ	が　	あなた	を　	学校	へ　	迎えに　来ますか。				
-S1		O1		O2		V1				
-Who 	comes to pick up 	you 	at 	school?						
-A	G	C		E						
-										
-10-2										
-宿題	を　	取りに　行って	も　	いいですか。						
-S1		V1		X2						
-May I 	go to pick up 	my homework?								
-E	D	A								
+9-1											
+犬	と　	猫	と　	どちら	の	方	が　	好き	ですか。		
+S1		S2		X1		X2		P1			
+Which 	one 	is 	liked, 	dogs 	or 	cats 	?				
+E	G		I	A		C					
+											
+9-1											
+私	は　	猫	より　	犬	の	方	が　	好き	です。		
+T1		S2	X1	S1		X2		P1			
+As for 	me, 	dogs 	are 	more 	liked 	than 	cats.				
+	A	E		D	I		C				
+											
+9-2											
+アメリカ	は　	中国	ほど　	広く	ありません。						
+T1		S1	X1	P1							
+As for 	America, 	it is 	not as 	spacious 	as 	China.					
+	A		D	E		C					
+											
+9-2											
+お好き	ですか。										
+P1											
+Is 	liked	?									
+B	A										
+											
+9-3											
+魚	と　	豚肉	と　	チキン	で　	何	が　	一番　	いい	ですか。	
+S1		S2		S3		X1		X2	P1		
+As for 	fish, 	pork, 	and 	chicken, 	which 	is 	number-one 	good	?		
+	A	C		E	G		I	J			
+											
+9-3											
+この　クラス	で　	だれ	が　	一番　	背が　高い	ですか。					
+T1		S1		X1	P1						
+In 	this class, 	who 	is 	number-one 	tall?						
+	A	C		E	F						
+											
+9-3											
+この　中	で　	これ	が　	一番　	好き	です。					
+T1		S1		X1	P1						
+Among these, 	this 	is 	number-one 	liked.							
+A	C		E	F							
+											
+10-1											
+しあい	が　	はじまります。									
+S1		V1									
+The game 	will start.										
+A	C										
+											
+10-1											
+しあい	を　	はじめます。									
+S1		V1									
+(someone) 	will start 	the game.									
+	C	A									
+											
+10-1											
+試合	の	始まる	時間	は　	何時	ですか。					
+T1		V1	N1		N2						
+What 	is 	game 	starting 	time?							
+F		A	C	D							
+											
+10-1											
+今日　試合	が　	あります	が、	行き	ませんか。						
+S1		V1		V2	X1						
+There 	is 	a 	game today. 	Won’t you 	go?						
+	C		A	F	E						
+											
+10-2											
+だれ	が　	あなた	を　	学校	へ　	迎えに　来ますか。					
+S1		O1		O2		V1					
+Who 	comes to pick up 	you 	at 	school?							
+A	G	C		E							
+											
+10-2											
+宿題	を　	取りに　行って	も　	いいですか。							
+S1		V1		X2							
+May I 	go to pick up 	my homework?									
+E	D	A									
+											
+10-3											
+父	は　	中国語	が　	話せますが、	私	は	話せません。				
+T1		S1		V1	T2		V2				
+My father 	can speak 	Chinese, 	but 	I 	cannot.						
+A	E	C		F	H						
+											
+10-3											
+母	は　	さしみ	が　	食べられません。							
+T1		S1		V1							
+My mother 	cannot eat 	sashimi.									
+A	E	C									
+											
+10-3											
+うるさくて、	勉強　	出来ません。									
+P1	O1	X1									
+It is noisy, 	so 	I cannot 	study.								
+A		C	B								
+											
+10-4											
+私	は　	チーム	に　	かって　	ほしい	です。					
+T1		S1		V1	X1						
+I 	want 	the team 	to win.								
+A	F	C	E								
+											
+11-2											
+この　本	を　	全部	読んで	しまいました。							
+O1		X1	V1	X1							
+I 	read 	this book 	entirely.								
+	D	A	C								
+											
+11-2											
+疲れていました	から、	ゆうべは　	早く　	ねて	しまいました。						
+P1	X1	S1	P2	V1	X2						
+I 	was tired, 	so 	I 	slept 	early 	last night.					
+	A	B		E	D	C					
+											
+11-2											
+昨日	は　	病気でした。	ですから、	宿題	が　	出来ませんでした。					
+T1		P1	X1	O		V1					
+I 	was sick 	yesterday. 	Therefore, 	I 	could not do 	homework.					
+	C	A	D		F	E					
+											
+11-2											
+母	は　	仕事	で　	東京	へ　	行きました。	だから、	私	が	料理	しなければなりません。
+T1		P1		O2		V1	X1	S1		V2	X2
+My mother 	went 	to 	Tokyo 	for 	work. 	Therefore, 	I 	have to 	cook.		
+A	G		E		C	H	I	L	K		
+											
+11-3											
+デレックさん	は　	「こんにちは。」	と　言いました。								
+T1		O1	X1								
+Derek 	said, 	“Hello.”									
+A	D	C									
+											
+11-4											
+明日　	日本語の　	試験	が　	ある	と　思います。						
+P1	P2	O1		V1	X1						
+I think that 	there 	will be 	a 	Japanese	test 	tomorrow.					
+F		E		B	C	A					
+											
+11-4											
+母	は　	今　	四十五才だ	と　思います。							
+T1		P1	P2	X1							
+I think that 	my mother 	is 	currently 	45 years old.							
+E	A		C	D							
+											
+11-4											
+父	は　	前　	ピアノ	が　	上手	だった	と　聞きました。				
+T1		P1	O1		P2		X1				
+I heard that 	my father 	was 	skillful 	at 	piano 	before.					
+H	A		F		D	C					
