@@ -147,3 +147,39 @@ E	A		C	D
 T1		P1	O1		P2		X1				
 I heard that 	my father 	was 	skillful 	at 	piano 	before.					
 H	A		F		D	C					
+											
+12-1											
+医者	に　なりたい	です。									
+S1	X1										
+I 	want to become 	a 	doctor.								
+	B		A								
+											
+13-2											
+右	に　	まがる	と、	動物園	が　	あります。					
+O1		V1	X1	S1		V1					
+If 	you 	turn 	to 	the right, 	the 	zoo 	is there.				
+D		C		A		E	G				
+											
+13-3											
+家	から　	学校	まで　	どのぐらい　かかりますか。							
+S1	X1	S2	X2	X3							
+How long does it take 	from 	home 	to 	school?							
+E	B	A	D	C							
+											
+13-3											
+バスで　	行く	のと　	タクシーで　	行く　	のと　	どちら	の	方	が　	速い	ですか。
+S1	V1	X1	S2	V1	X1	X2		X3		P	
+Which 	alternative 	is 	fast, 	going 	by bus 	or 	going 	by taxi?			
+G	I		K	B	A		E	D			
+											
+13-3											
+バスで　	行き	方	が　	歩く	より　	速い	です。				
+S1	V1	X1		S2	X2	P1					
+Way of 	going 	is 	more 	fast 	by bus 	than 	by foot.				
+C	B		F	G	A	F	E				
+											
+13-3											
+バスで　	学校へ　	行くの	は　	車で　	行く	ほど　	速く	ありません。			
+S1	O1	V1		S2	V1	X1	P1	X1			
+Going 	to school 	by bus 	is 	not as 	fast 	as 	going 	by car.			
+C	B	A		G	H	G	F	E			
