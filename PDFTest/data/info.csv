@@ -1,11 +1,16 @@
+9-1									
 犬	と　	猫	と　	どちら	の	方	が　	好き	ですか。
 S1		S2		X1		X2		P1	
 Which 	one 	is 	liked, 	dogs 	or 	cats 	?		
 E	G		I	A		C			
+									
+9-1									
 私	は　	猫	より　	犬	の	方	が　	好き	です。
 T1		S2	X1	S1		X2		P1	
 As for 	me	, 	dogs 	are 	more 	liked 	than 	cats.	
 	A		E		D	I		C	
+									
+9-2									
 アメリカ	は　	中国	ほど　	広く	ありません。				
 T1		S1	X1	P1					
 As for 	America	, 	it is 	not as 	spacious 	as 	China.		

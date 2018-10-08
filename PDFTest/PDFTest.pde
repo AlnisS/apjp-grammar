@@ -19,29 +19,17 @@ void draw() {
   TableRow[] testrows = new TableRow[4];
   PGraphicsPDF pdf = (PGraphicsPDF) g;
   for (int j = 0; j < 3; j++) {
+    String unit = table.getRow(j * 6).getString(0);
     for (int i = 0; i < 4; i++) {
-      testrows[i] = table.getRow(j * 4 + i);
+      testrows[i] = table.getRow(j * 6 + 1 + i);
     }
-    Pattern pattern = new Pattern(testrows);
+    Pattern pattern = new Pattern(testrows, unit);
     println(pattern);
     
     background(0);
     pattern.show();
     pdf.nextPage();
   }
-  //prettyPrint(10, 10, new String[] {"this", "test"}, new color[] {0xe6194BFF, idToColor("P1")});//idToColor("S1")
-  
-  //JSONArray testArray = new JSONArray();
-  //JSONObject test = new JSONObject();
-  
-  //line(0, 0, frameCount * 4, height);
-  //PGraphicsPDF pdf = (PGraphicsPDF) g;
-  //if (frameCount == 100) {
-  //  println("done");
-  //  exit();
-  //} else {
-  //  pdf.nextPage();
-  //}
   exit();
 }
 
@@ -67,13 +55,16 @@ color idToColor(String s) {
 }
 
 class Pattern {
+  String unit;
   String[] basej;
   String[] basee;
   String[] genj;
   color[] basejc;
   color[] baseec;
   color[] genjc;
-  Pattern(TableRow[] rows) {
+  Pattern(TableRow[] rows, String unit) {
+    this.unit = unit;
+    
     basej = new String[rows[0].getColumnCount()];
     basejc = new color[rows[0].getColumnCount()];
     basee = new String[rows[2].getColumnCount()];
@@ -118,9 +109,10 @@ class Pattern {
   }
   
   void show() {
-    prettyPrint(10, 50, basej, basejc);
-    prettyPrint(10, 100, basee, baseec);
-    prettyPrint(10, 150, genj,  genjc);
+    prettyPrint(10, 50, new String[] {unit}, new color[] {color(255)});
+    prettyPrint(10, 100, basej, basejc);
+    prettyPrint(10, 150, basee, baseec);
+    prettyPrint(10, 200, genj,  genjc);
   }
   
   String toString() {
