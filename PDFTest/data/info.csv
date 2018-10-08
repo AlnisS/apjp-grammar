@@ -39,3 +39,39 @@ In 	this class, 	who 	is 	number-one 	tall?
 T1		S1		X1	P1					
 Among these, 	this 	is 	number-one 	liked.						
 A	C		E	F						
+										
+10-1										
+しあい	が　	はじまります。								
+S1		V1								
+The game 	will start.									
+A	C									
+										
+10-1										
+しあい	を　	はじめます。								
+S1		V1								
+(someone) 	will start 	the game.								
+	C	A								
+										
+10-1										
+試合	の	始まる	時間	は　	何時	ですか。				
+T1		V1	N1		N2					
+What 	is 	game 	starting 	time?						
+F		A	C	D						
+										
+10-1										
+今日　試合	が　	あります	が、	行き	ませんか。					
+S1		V1		V2	X1					
+There 	is 	a 	game today. 	Won’t you 	go?					
+	C		A	F	E					
+										
+10-2										
+だれ	が　	あなた	を　	学校	へ　	迎えに　来ますか。				
+S1		O1		O2		V1				
+Who 	comes to pick up 	you 	at 	school?						
+A	G	C		E						
+										
+10-2										
+宿題	を　	取りに　行って	も　	いいですか。						
+S1		V1		X2						
+May I 	go to pick up 	my homework?								
+E	D	A								
