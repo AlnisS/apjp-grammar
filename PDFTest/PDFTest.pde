@@ -18,7 +18,7 @@ void draw() {
   Table table = loadTable("info.csv", "tsv");
   TableRow[] testrows = new TableRow[4];
   PGraphicsPDF pdf = (PGraphicsPDF) g;
-  for (int j = 0; j < 3; j++) {
+  for (int j = 0; j <= table.getRowCount() / 6; j++) {
     String unit = table.getRow(j * 6).getString(0);
     for (int i = 0; i < 4; i++) {
       testrows[i] = table.getRow(j * 6 + 1 + i);
